@@ -8,19 +8,41 @@
 
 
 
+
+
+                @if (Auth::guest())
                 <div class="col">
                     <a class="btn btn-primary" href="{{ route('register') }}">Create</a>
                 </div>
-
+                @else
+                <div class="col">
+                   <a class="btn btn-primary" href="{{ route('logoutCreate') }}">Create</a>
+                </div>
+                @endif
 
                 <div class="col">
-                    <a class="btn btn-primary" href="{{ route('espace.useredite') }}">Modifier</a>
+
+
+                    <a class="btn btn-primary" href="{{ route('espace.useredite')}}">Modifier</a>
+
                 </div>
                 <div class="col">
+                    <a class="btn btn-primary" href="{{ route('info.user')}}">Consulter</a>
+                </div>
 
-                    <a class="btn btn-primary" href="#">Consulter</a>
+
+                {{--  @foreach($users as $user)
+                <div class="col">
+
+                    <a class="btn btn-primary" href="{{ route('espace.useredite',['id'=>$user->id]) }}">Modifier</a>
+
 
                 </div>
+                <div class="col">
+                    <a class="btn btn-primary" href="{{ route('info.user',['id'=>$user->id]) }}">Consulter</a>
+                </div>
+                @endforeach  --}}
+
 
               </div>
 
