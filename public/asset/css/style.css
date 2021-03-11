@@ -1,0 +1,29 @@
+body {
+    font-family: 'Nunito', sans-serif;
+}
+.imageover{
+    background: none;
+    top: 0;
+    color: #FFFFFF;
+    left: 45%;
+    position: fixed;
+    width: 100%;
+    z-index: 8;
+    opacity: 1.0 !important
+  }
+
+  .FixBottonBottom{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+  }
+
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left:40%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
